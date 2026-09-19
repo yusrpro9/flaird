@@ -27,6 +27,7 @@ env:
   TIRA_CLI_VERSION: "0.0.204"
   TIRA_TASK: generative-ai-authorship-verification-panclef-2026
   TIRA_DATASET: pan26-generative-ai-detection-smoke-test-20260330-training
+  BASE_MODEL_ID: answerdotai/ModernBERT-large
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   TIRA_CLIENT_TOKEN: ${{ secrets.TIRA_CLIENT_TOKEN }}
@@ -88,26 +89,36 @@ jobs:
           python - <<'PY'
           import os
 
-          from huggingface_hub import snapshot_download
+          from huggingface_hub import HfApi, snapshot_download
 
-          path = snapshot_download(
-              repo_id=os.environ["MODEL_ID"],
-              token=os.environ["HF_TOKEN"],
-              ignore_patterns=["onnx/*"],
-          )
           from pathlib import Path
 
-          model_path = Path(path)
-          weight_files = [
-              *model_path.glob("*.safetensors"),
-              *model_path.glob("*.bin"),
-          ]
-          if not weight_files:
-              raise RuntimeError(
-                  f"No model weight file found in {model_path}; expected *.safetensors or *.bin."
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          for model_id in (os.environ["MODEL_ID"], os.environ["BASE_MODEL_ID"]):
+              try:
+                  api.model_info(model_id)
+              except Exception as error:
+                  raise RuntimeError(
+                      f"Hugging Face model '{model_id}' was not found or is not accessible. "
+                      "Check the model ID and HF_TOKEN permissions."
+                  ) from error
+
+              path = snapshot_download(
+                  repo_id=model_id,
+                  token=os.environ["HF_TOKEN"],
+                  ignore_patterns=["onnx/*"],
               )
-          print(f"Model cached at: {model_path}")
-          print("Model weights:", ", ".join(file.name for file in weight_files))
+              model_path = Path(path)
+              weight_files = [
+                  *model_path.glob("*.safetensors"),
+                  *model_path.glob("*.bin"),
+              ]
+              if not weight_files:
+                  raise RuntimeError(
+                      f"No model weight file found for '{model_id}' in {model_path}."
+                  )
+              print(f"Model cached at: {model_path}")
+              print("Model weights:", ", ".join(file.name for file in weight_files))
           PY
 
       - name: Build, test, and upload image
@@ -122,7 +133,7 @@ jobs:
             --task "${TIRA_TASK}"
             --dataset "${TIRA_DATASET}"
             --platform linux/amd64
-            --mount-hf-model "${MODEL_ID}"
+            --mount-hf-model "${MODEL_ID}" "${BASE_MODEL_ID}"
             --command "/usr/local/bin/flaird --model ${MODEL_ID}"
           )
 
