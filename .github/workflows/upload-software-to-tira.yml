@@ -73,7 +73,7 @@ jobs:
             --dataset "${TIRA_DATASET}"
             --platform linux/amd64
             --mount-hf-model
-            yusr9/flaird-modernbert-large-gated-multitask
+            yusr9/flaird-modernbert-large-attention-multitask-frozen
             --command "/usr/local/bin/flaird --model yusr9/flaird-modernbert-large-attention-multitask-frozen"
           )
 
