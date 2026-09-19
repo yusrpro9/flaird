@@ -147,7 +147,7 @@ def main(
     if input_file is not None:
         input_path = Path(input_file)
         output_directory = output_directory or legacy_output_directory
-    # input_path = resolve_input_path(input_directory, input_file)
+    input_path = resolve_input_path(input_directory, input_file)
 
     if output_directory is None:
         raise click.UsageError(
