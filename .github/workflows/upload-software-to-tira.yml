@@ -11,13 +11,13 @@ on:
       model_id:
         description: "Hugging Face model repository (full ID or repository name)"
         required: true
-        default: yusr9/flaird-modernbert-large-attention-multitask-frozen
+        default: yusr9/flaird-modernbert-large-gated-multitask
         type: string
       dry_run:
         description: "Build and test without uploading to TIRA"
         required: true
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: read
@@ -93,9 +93,21 @@ jobs:
           path = snapshot_download(
               repo_id=os.environ["MODEL_ID"],
               token=os.environ["HF_TOKEN"],
-              ignore_patterns=["*.bin", "onnx/*"],
+              ignore_patterns=["onnx/*"],
           )
-          print(f"Model cached at: {path}")
+          from pathlib import Path
+
+          model_path = Path(path)
+          weight_files = [
+              *model_path.glob("*.safetensors"),
+              *model_path.glob("*.bin"),
+          ]
+          if not weight_files:
+              raise RuntimeError(
+                  f"No model weight file found in {model_path}; expected *.safetensors or *.bin."
+              )
+          print(f"Model cached at: {model_path}")
+          print("Model weights:", ", ".join(file.name for file in weight_files))
           PY
 
       - name: Build, test, and upload image
