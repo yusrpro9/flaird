@@ -17,6 +17,34 @@ from transformers import (
 from flaird.data.data_collator import DataCollator
 
 
+def resolve_model_path(model_path: str) -> str:
+    """Resolve a mounted Hugging Face repository to its local snapshot."""
+    local_path = Path(model_path)
+    if local_path.is_dir():
+        return str(local_path)
+
+    cache_root = Path(os.getenv("HF_HUB_CACHE", "~/.cache/huggingface/hub")).expanduser()
+    repo_cache = cache_root / f"models--{model_path.replace('/', '--')}"
+    snapshots = sorted(
+        snapshot
+        for snapshot in (repo_cache / "snapshots").glob("*")
+        if (snapshot / "config.json").is_file()
+        and (
+            any(snapshot.glob("*.safetensors"))
+            or any(snapshot.glob("*.bin"))
+        )
+    )
+    if len(snapshots) == 1:
+        return str(snapshots[0])
+    if not snapshots:
+        raise FileNotFoundError(
+            f"Could not find a mounted local snapshot for model '{model_path}' in {repo_cache}."
+        )
+    raise RuntimeError(
+        f"Found multiple mounted snapshots for model '{model_path}' in {repo_cache}."
+    )
+
+
 def resolve_input_path(input_directory: str | None, input_file: str | None) -> Path:
     """Resolve the JSONL input exposed by TIRA or supplied via the legacy CLI."""
     if input_file is not None:
@@ -54,6 +82,7 @@ def test(
     apply_text_preprocessing: bool = True,
     score_column: str = "label",
 ) -> pd.DataFrame:
+    model_path = resolve_model_path(model_path)
     device = torch.device(
         device if device != "auto" else ("cuda" if torch.cuda.is_available() else "cpu")
     )
