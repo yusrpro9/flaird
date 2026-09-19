@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=78.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flaird"
+version = "1.0.0"
+description = "Forensic Linguistics and AI for the Detection of Machine-Generated Disinformation Campaigns"
+authors = [
+  { name = "Mahmood Anaam" }
+]
+license = { text = "Apache License 2.0" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "python-dotenv==1.2.2",
+    "click>=8.4.2,<9",
+    "pystylometry[all]>=1.4.3,<2",
+    "numpy>=1.26.0,<3",
+    "pandas>=2.2.0,<3",
+    "torch>=2.8.0,<3",
+    "datasets==4.0.0",
+    "scikit-learn==1.6.1",
+    "transformers==5.16.1",
+    "evaluate==0.4.6",
+    "accelerate>=1.10.1,<2",
+    "tensorboard>=2.18,<3",
+    "tqdm==4.67.3",
+    "nltk==3.9.4",
+    "torch-summary==1.4.5",
+    "gradio>=5.50.0,<7",
+]
+
+
+[project.urls]
+repository = "https://github.com/Mahmood-Anaam/flaird"
+
+[project.scripts]
+flaird-train = "flaird.scripts.train:main"
+flaird-evaluator = "flaird.scripts.evaluator:main"
+flaird-predict = "flaird.scripts.predict:main"
+flaird-tira_test = "flaird.scripts.tira_test:main"
+flaird-raid_test = "flaird.scripts.raid_test:main"
+flaird = "flaird.scripts.tira_test:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["flaird*"]
