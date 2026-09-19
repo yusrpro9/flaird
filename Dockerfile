@@ -6,7 +6,6 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/*
 
 COPY src /opt/flaird/src
-COPY requirements.txt /opt/flaird/
 COPY pyproject.toml /opt/flaird
 WORKDIR /opt/flaird
 RUN set -x \
