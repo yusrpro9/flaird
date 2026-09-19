@@ -11,7 +11,7 @@ on:
       model_id:
         description: "Hugging Face model repository (full ID or repository name)"
         required: true
-        default: yusr9/flaird-modernbert-large-gated-multitask
+        default: yusr9/flaird-modernbert-large-attention-multitask-frozen
         type: string
       dry_run:
         description: "Build and test without uploading to TIRA"
