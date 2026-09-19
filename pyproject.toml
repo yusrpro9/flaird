@@ -7,41 +7,45 @@ name = "flaird"
 version = "1.0.0"
 description = "Forensic Linguistics and AI for the Detection of Machine-Generated Disinformation Campaigns"
 authors = [
-  { name = "Mahmood Anaam" }
+  { name = "yusrpro9" }
 ]
 license = { text = "Apache License 2.0" }
 readme = "README.md"
 requires-python = ">=3.10"
 
 dependencies = [
-    "python-dotenv==1.2.2",
-    "click>=8.4.2,<9",
-    "pystylometry[all]>=1.4.3,<2",
+    "click==8.3.3",
     "numpy>=1.26.0,<3",
     "pandas>=2.2.0,<3",
     "torch>=2.8.0,<3",
     "datasets==4.0.0",
-    "scikit-learn==1.6.1",
-    "transformers==5.16.1",
-    "evaluate==0.4.6",
-    "accelerate>=1.10.1,<2",
-    "tensorboard>=2.18,<3",
+    "transformers==5.10.2",
     "tqdm==4.67.3",
     "nltk==3.9.4",
-    "torch-summary==1.4.5",
-    "gradio>=5.50.0,<7",
+    "pystylometry==1.4.3",
 ]
 
+[project.optional-dependencies]
+train = [
+    "python-dotenv==1.2.2",
+    "accelerate==1.13.0",
+    "wandb==0.28.0",
+    "tensorboard>=2.18.0,<3",
+    "evaluate==0.4.6",
+    "scikit-learn==1.6.1",
+    "gradio>=5.50.0,<7",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
 
 [project.urls]
-repository = "https://github.com/Mahmood-Anaam/flaird"
+repository = "https://github.com/yusrpro9/flaird"
 
 [project.scripts]
 flaird-train = "flaird.scripts.train:main"
 flaird-evaluator = "flaird.scripts.evaluator:main"
-flaird-predict = "flaird.scripts.predict:main"
-flaird-tira_test = "flaird.scripts.tira_test:main"
-flaird-raid_test = "flaird.scripts.raid_test:main"
 flaird = "flaird.scripts.tira_test:main"
 
 [tool.setuptools]
