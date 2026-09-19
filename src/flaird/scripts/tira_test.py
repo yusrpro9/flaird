@@ -23,9 +23,9 @@ def test(
     device: str | torch.device = "auto",
     batch_size: int = 8,
     text_column: str = "text",
-    feature_column: str | None = None
-    apply_text_preprocessing: bool = True
-    score_column: str = "label",
+    feature_column: str | None = None,
+    apply_text_preprocessing: bool = True,
+    score_column: str = "label"
 ) -> pd.DataFrame:
     device = torch.device(
         device if device != "auto" else ("cuda" if torch.cuda.is_available() else "cpu")
