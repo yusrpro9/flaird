@@ -17,6 +17,33 @@ from transformers import (
 from flaird.data.data_collator import DataCollator
 
 
+def resolve_input_path(input_directory: str | None, input_file: str | None) -> Path:
+    """Resolve the JSONL input exposed by TIRA or supplied via the legacy CLI."""
+    if input_file is not None:
+        return Path(input_file)
+
+    if input_directory is None:
+        raise click.UsageError(
+            "Missing input. Provide --input-directory or set inputDataset."
+        )
+
+    input_dir = Path(input_directory)
+    for filename in ("dataset.jsonl", "input.jsonl"):
+        candidate = input_dir / filename
+        if candidate.is_file():
+            return candidate
+
+    candidates = sorted(path for path in input_dir.rglob("*.jsonl") if path.is_file())
+    if len(candidates) == 1:
+        return candidates[0]
+
+    available = ", ".join(str(path.relative_to(input_dir)) for path in candidates)
+    raise click.UsageError(
+        "Could not identify a single JSONL input file in "
+        f"{input_dir}. Candidates: {available or 'none'}."
+    )
+
+
 def test(
     dataset: Dataset,
     model_path: str,
@@ -25,7 +52,7 @@ def test(
     text_column: str = "text",
     feature_column: str | None = None,
     apply_text_preprocessing: bool = True,
-    score_column: str = "label"
+    score_column: str = "label",
 ) -> pd.DataFrame:
     device = torch.device(
         device if device != "auto" else ("cuda" if torch.cuda.is_available() else "cpu")
@@ -41,7 +68,7 @@ def test(
     data_collator = DataCollator(
         tokenizer=tokenizer,
         text_column=text_column,
-        feature_column = feature_column,
+        feature_column=feature_column,
         max_length=512,
         use_forensic_features=True,
         apply_text_preprocessing=apply_text_preprocessing,
@@ -120,12 +147,7 @@ def main(
     if input_file is not None:
         input_path = Path(input_file)
         output_directory = output_directory or legacy_output_directory
-    else:
-        if input_directory is None:
-            raise click.UsageError(
-                "Missing input. Provide --input-directory or set inputDataset environment variable."
-            )
-        input_path = Path(input_directory) / "dataset.jsonl"
+    input_path = resolve_input_path(input_directory, input_file)
 
     if output_directory is None:
         raise click.UsageError(
@@ -142,7 +164,7 @@ def main(
         device=device,
         batch_size=batch_size,
         text_column="text",
-        feature_column = None,
+        feature_column=None,
         apply_text_preprocessing=True,
         score_column="label",
     )
