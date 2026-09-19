@@ -4,33 +4,24 @@ on:
   workflow_dispatch:
     inputs:
       directory:
-        description: "Directory containing the submission; use . for the repository root"
+        description: 'The directory that contains the submission. Can be . for the root of the repository'
         required: true
         default: .
         type: string
-      model_id:
-        description: "Hugging Face model repository (full ID or repository name)"
-        required: true
-        default: yusr9/flaird-modernbert-large-attention-multitask-frozen
-        type: string
       dry_run:
-        description: "Build and test without uploading to TIRA"
+        description: 'Build and test without uploading to TIRA'
         required: true
-        type: boolean
         default: true
+        type: boolean
 
 permissions:
   contents: read
 
 env:
   DOCKER_HOST: unix:///var/run/docker.sock
-  TIRA_CLI_VERSION: "0.0.204"
+  TIRA_CLI_VERSION: '0.0.204'
   TIRA_TASK: generative-ai-authorship-verification-panclef-2026
   TIRA_DATASET: pan26-generative-ai-detection-smoke-test-20260330-training
-  BASE_MODEL_ID: answerdotai/ModernBERT-large
-  HF_USERNAME: ${{ secrets.HF_USERNAME }}
-  HF_TOKEN: ${{ secrets.HF_TOKEN }}
-  TIRA_CLIENT_TOKEN: ${{ secrets.TIRA_CLIENT_TOKEN }}
 
 jobs:
   docker-build:
@@ -43,98 +34,47 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: 3.11
 
-      - name: Validate secrets and normalize model ID
-        env:
-          MODEL_INPUT: ${{ inputs.model_id }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          for variable in HF_USERNAME HF_TOKEN TIRA_CLIENT_TOKEN; do
-            if [[ -z "${!variable:-}" ]]; then
-              echo "::error::Required secret ${variable} is not configured."
-              exit 1
-            fi
-          done
-
-          if [[ "${MODEL_INPUT}" == */* ]]; then
-            model_id="${MODEL_INPUT}"
-          else
-            model_id="${HF_USERNAME}/${MODEL_INPUT}"
-          fi
-          if [[ ! "${model_id}" =~ ^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$ ]]; then
-            echo "::error::model_id must be a valid owner/repository identifier."
-            exit 1
-          fi
-          echo "MODEL_ID=${model_id}" >> "${GITHUB_ENV}"
-
-      - name: Install submission clients
+      - name: Install TIRA CLI
         run: |
           python -m pip install --upgrade pip
-          python -m pip install \
-            "huggingface_hub>=1.5,<2" \
-            "tira==${TIRA_CLI_VERSION}"
+          python -m pip install "tira==${TIRA_CLI_VERSION}"
 
       - name: Authenticate with TIRA
-        run: tira-cli login --token "${TIRA_CLIENT_TOKEN}"
+        run: tira-cli login --token "${{ secrets.TIRA_CLIENT_TOKEN }}"
 
       - name: Verify local installation
         run: tira-cli verify-installation --local-only
 
       - name: Download Hugging Face model
-        shell: bash
         run: |
-          set -euo pipefail
+          python -m pip install --upgrade "huggingface_hub>=0.34,<2"
+
           python - <<'PY'
-          import os
+          from huggingface_hub import snapshot_download
 
-          from huggingface_hub import HfApi, snapshot_download
-
-          from pathlib import Path
-
-          api = HfApi(token=os.environ["HF_TOKEN"])
-          for model_id in (os.environ["MODEL_ID"], os.environ["BASE_MODEL_ID"]):
-              try:
-                  api.model_info(model_id)
-              except Exception as error:
-                  raise RuntimeError(
-                      f"Hugging Face model '{model_id}' was not found or is not accessible. "
-                      "Check the model ID and HF_TOKEN permissions."
-                  ) from error
-
-              path = snapshot_download(
-                  repo_id=model_id,
-                  token=os.environ["HF_TOKEN"],
-                  ignore_patterns=["onnx/*"],
-              )
-              model_path = Path(path)
-              weight_files = [
-                  *model_path.glob("*.safetensors"),
-                  *model_path.glob("*.bin"),
-              ]
-              if not weight_files:
-                  raise RuntimeError(
-                      f"No model weight file found for '{model_id}' in {model_path}."
-                  )
-              print(f"Model cached at: {model_path}")
-              print("Model weights:", ", ".join(file.name for file in weight_files))
+          path = snapshot_download(
+              repo_id="yusr9/flaird-modernbert-large-attention-multitask-frozen",
+              ignore_patterns=["*.bin", "onnx/*"],
+          )
+          print(f"Model cached at: {path}")
           PY
+
+          test -d "${HOME}/.cache/huggingface/hub/models--yusr9--flaird-modernbert-large-attention-multitask-frozen"
 
       - name: Build, test, and upload image
         env:
           DRY_RUN: ${{ inputs.dry_run }}
-          SUBMISSION_DIRECTORY: ${{ inputs.directory }}
-        shell: bash
         run: |
-          set -euo pipefail
           submission_args=(
-            --path "${SUBMISSION_DIRECTORY}"
+            --path "${{ inputs.directory }}"
             --task "${TIRA_TASK}"
             --dataset "${TIRA_DATASET}"
             --platform linux/amd64
-            --mount-hf-model "${MODEL_ID}" "${BASE_MODEL_ID}"
-            --command "/usr/local/bin/flaird --model ${MODEL_ID}"
+            --mount-hf-model
+            yusr9/flaird-modernbert-large-gated-multitask
+            --command "/usr/local/bin/flaird --model yusr9/flaird-modernbert-large-attention-multitask-frozen"
           )
 
           if [[ "${DRY_RUN}" == "true" ]]; then
