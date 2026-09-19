@@ -147,7 +147,7 @@ def main(
     if input_file is not None:
         input_path = Path(input_file)
         output_directory = output_directory or legacy_output_directory
-    input_path = resolve_input_path(input_directory, input_file)
+    # input_path = resolve_input_path(input_directory, input_file)
 
     if output_directory is None:
         raise click.UsageError(
@@ -156,7 +156,7 @@ def main(
 
     Path(output_directory).mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    test_ds = Dataset.from_json(input_path)
+    test_ds = Dataset.from_json(str(input_path))
 
     predictions_df = test(
         dataset=test_ds,
