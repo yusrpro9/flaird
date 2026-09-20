@@ -2,12 +2,12 @@ import os
 import re
 
 import gradio as gr
+
+import spaces
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-model_id = os.environ.get(
-    "MODEL_ID", "yusr9/flaird-modernbert-large-attention-multitask-frozen"
-)
+model_id = os.environ.get("MODEL_ID")
 max_length = int(os.environ.get("MAX_LENGTH", 512))
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -31,15 +31,12 @@ def preprocess(text: str) -> str:
     return text.strip()
 
 
+@spaces.GPU
 def predict(text: str) -> str:
 
     text = preprocess(text)
-    inputs = tokenizer(
-        text, return_tensors="pt", truncation=True, max_length=max_length
-    )
-    inputs["forensic_features"] = model.extract_forensic_features(
-        [text], return_tensors=True
-    )
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=max_length)
+    inputs["forensic_features"] = model.extract_forensic_features([text], return_tensors=True)
     inputs = inputs.to(device)
 
     with torch.no_grad():
