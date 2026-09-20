@@ -22,7 +22,7 @@ dependencies = [
     "transformers==5.10.2",
     "tqdm==4.67.3",
     "nltk==3.9.4",
-    "pystylometry==1.4.3",
+    "pystylometry[all]==1.4.3",
 ]
 
 [project.optional-dependencies]
