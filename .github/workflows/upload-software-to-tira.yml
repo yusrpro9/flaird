@@ -108,7 +108,7 @@ jobs:
             --dataset "${TIRA_DATASET}"
             --platform linux/amd64
             --mount-hf-model "${MODEL_ID}"
-            --command "/usr/local/bin/flaird --model ${MODEL_ID}"
+            --command "/usr/local/bin/flaird-tira-test --model ${MODEL_ID}"
           )
 
           if [[ "${DRY_RUN}" == "true" ]]; then
