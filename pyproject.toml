@@ -46,7 +46,8 @@ repository = "https://github.com/yusrpro9/flaird"
 [project.scripts]
 flaird-train = "flaird.scripts.train:main"
 flaird-evaluator = "flaird.scripts.evaluator:main"
-flaird-tira_test = "flaird.scripts.tira_test:main"
+flaird-tira-test = "flaird.scripts.tira_test:main"
+flaird-raid-test = "flaird.scripts.raid_test:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
