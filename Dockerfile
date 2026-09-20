@@ -15,4 +15,4 @@ RUN set -x \
 
 ENV HF_HUB_OFFLINE=1
 
-ENTRYPOINT ["/usr/local/bin/flaird"]
+ENTRYPOINT ["/usr/local/bin/flaird-tira-test"]
