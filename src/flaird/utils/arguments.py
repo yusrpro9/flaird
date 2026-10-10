@@ -77,7 +77,7 @@ class ModelArguments:
 @dataclass
 class DataArguments:
     dataset_validation_path: str = field(
-        default="MahmoodAnaam/flaird-raid-pan26",
+        default="yusr9/flaird-raid-pan26",
         metadata={"help": "Hugging Face Hub dataset repository ID or local dataset path."},
     )
 
@@ -87,7 +87,7 @@ class DataArguments:
     )
 
     dataset_train_path: str = field(
-        default="MahmoodAnaam/flaird-raid-pan26",
+        default="yusr9/flaird-raid-pan26",
         metadata={"help": "Hugging Face Hub dataset repository ID or local dataset path."},
     )
     dataset_train_config_name: str | None = field(
