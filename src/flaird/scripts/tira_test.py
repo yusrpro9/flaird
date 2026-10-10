@@ -100,7 +100,7 @@ def test(
 )
 @click.option(
     "--model",
-    default="MahmoodAnaam/flaird-modernbert-large-attention-multitask-frozen",
+    default="yusr9/flaird-modernbert-large-attention-multitask-frozen",
     required=False,
     help="The model to use",
 )
