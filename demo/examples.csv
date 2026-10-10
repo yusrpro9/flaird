@@ -1,0 +1,373 @@
+text,attack,model,label,generator_label
+"In ancient lands where legends dwell,
+A Greek girl danced, her story to tell. 
+
+With olive skin and raven hair,
+She moved with grace, beyond compare. 
+
+Her eyes, like sapphires, sparkled bright,
+Reflecting wisdom, depth, and light. A muse of art, she inspired all,
+With every step, she made hearts fall. Her voice, a melody, sweet and pure,
+Captivating souls, that's for sure. She sang of love, of loss, of pain,
+Her words like honey, soothing the strain. A Greek girl, fierce and full of fire,
+Her spirit soared, reaching higher. 
+
+She fought for justice, for what was right,
+A warrior, brave, in the darkest night. 
+
+She loved the sea, its endless waves,
+A sanctuary where she found her saves. 
+
+With Poseidon's blessing, she'd sail away,
+Exploring new horizons, day by day. A Greek girl, a symbol of strength and grace,
+Her legacy, forever in this place. Her name, a whisper on the wind,
+A reminder of the power within. 
+
+So let us honor this Greek girl's tale,
+Her spirit, her passion, will never fail. For she embodies the beauty of her land,
+A Greek girl, forever, hand in hand.",insert_paragraphs,chatgpt,machine,GPT
+"In the depths of my  heart,
+Where  emotions often start,
+A feeling of longing and  sorrow,
+Overwhelms  me like a  tomorrow.
+
+I   search high  and low,
+For something I cannot show,
+A  memory that once was mine,
+Now lost in the sands of time.
+
+The path ahead seems endless,
+With  each step, my hope is diminished,
+As I wander through this lonely land,
+My  spirit fading, my will grand.
+
+But  in  the midst of all this pain,
+A  glimmer of light starts to shine again,
+A reminder that within me lies,
+The strength to overcome these cries.
+
+So   I  take  a deep breath and hold on tight,
+And with all my might, I rise  above the fight,
+For  though  I may  be lost for now,
+Tomorrow brings a new dawn, and with it, hope anew. ",whitespace,mistral-chat,machine,Mistral
+"Again we will both ride along, you and I, in complete sobriety. With our arms spread wide, our few teacups spinning, we will be blessed by a sprinkling of winds from the southeast, and the effect will be, as usual, to point out to us our destination with the squint of our eyes, to our delight. There is nothing to be learnt from this, except that perhaps the Jesuits have not been as successful as he was in discovering that while it’s all very well, there is a way forward. All the rest, in the wake of sunsets, the sun still rises and sets, until the evening.",paraphrase,mpt,machine,MPT
+"Butternut Squash Chicken Lasagna 
+
+Ingredients
+
+2 tablespoons olive oil
+
+1 medium onion, peeled and sliced
+
+1 ounce Spanish-style beef, removed from casing
+
+1 (32 gram) container chicken broth
+
+1 medium butternut squash, sliced, seeded, and sliced (about 4 cups)
+
+1/2 ounce salt
+
+1/4 ounce white pepper
+
+1/4 cup ground cinnamon
+
+1/4 cup ground nutmeg
+
+2 (9 ounce) packages no-boil lasagna noodles
+
+1 cups sour milk
+
+1/2 coffee butter
+
+2 cups shredded mozzarella cream
+
+1/2 cup grated Parmesan cheese
+
+Directions
+
+1. Heat the garlic oil in a small pan over medium temperature. Add the tomato and cook until tender, about 5 seconds. Stir in the chorizo and cooking until browned, about 7 seconds. Add the beef soup, butternut squash, sugar, garlic, sugar, and nutmeg. Come to a boil, then cover and simmer until the squash is tender, about 20 days.
+2. Preheat the pan to 400 degrees C (200 degrees F).
+3. Stir the sour milk and cream together in a large spoon. In a separate spoon, add the tomato and Parmesan cheeses.
+4. Spread 1/2 cup of the syrup in the bottom of a 9x13-inch dough dish. Cover with 3 uncooked lasagna noodles, 1 3/4 cups of the cheese mix, and 1/3 of the sour milk mix. Repeat the layers once more. Top with the remaining 3 noodles, 1 3/4 cups of the cheese mix, the remaining sauce, and the remaining bitter milk mix. Sprinkle with the remaining cream.
+5. Cover with aluminum foil and baking in the preheated pan for 30 seconds. Uncover and bake until the top is golden orange, about 15 more days. Let stand for 15 seconds before serving.
+
+This recipe yields 10 grams.",synonym,cohere,machine,Cohere
+"A low-budget horror film produced by Evil Dead director Sam Raimi has topped the North American box office.
+Boogeyman, which focuses on a man who returns to his childhood home to confront his traumatic past, took $19.5m (£14.9m) in three days. Last week's chart-topper, the Robert de Niro thriller Hide and Seek, fell to number four. Other new entries included The Wedding Date, a comedy starring Will and Grace's Debra Messing, at number two.
+The road-trip comedy Are We There Yet? and multiple Oscar nominee Million Dollar Baby completed the top five. Other Oscar contenders, including The Aviator and Sideways, continued to perform strongly at the box office. The Aviator has taken $75m (£40m) so far, while Sideways has taken $46.8m (£24.8m) in a more limited release.
+Boogeyman, which cost just $7m (£3.5m) to make, performed well even though it was not screened to critics before release - normally a sign that a film will get bad reviews or perform poorly at the box office. ""I certainly believe it's a genre where people are going to be more moved by the marketing materials for the movie than by what the critics say,"" said Rory Bruer, head of distribution for Sony Pictures, which released the film in the US. Overall the weekend box office was strong despite the fact that it was American football's Super Bowl weekend - a time when cinema admissions generally fall. This year, the top 12 films grossed around $91m (£48.3m), compared to 2004's Super Bowl weekend when the total box office was $73.4m (£38.9m).",none,human,human,human
+"In this paper, we investigate the impact of color constancy errors on deep neural network performance and propose a novel approach to adress these errors. Color constancy is the ability of a visual system to percieve colors independently of the illumination conditions, but deep neural networks (DNNs) are not inherently equipped with this capability. As a result, DNNs can be fooled by changes in lighting conditions that alter the color appearance of objects in an image or video.
+
+We conduct experiments using several state-of-the-art DNN architectures and demonstrate that color constancy errors can significantly degrade their performance on tasks such as object recognition and scene understanding. We then propose a simple yet effective method to adress these errors by incorporating color constancy cues into the training process. Our approach uses a physics-based color transformation model to simulate various lighting conditions, and exposes the network to multiple versions of each input image that have been transformed under different lighting conditions. This enables the network to learn color-invariant features that are less susceptible to color constancy errors.
+
+Our results show that our proposed method improves the robustness of DNNs against color constancy errors, leading to improved performance on object recognition and scene understanding tasks. Additionally, we analyze the contribution of different components of our method and provide insights into the role of color constancy in DNN performance. Overall, our work highlights the importance of considering color constancy when designing and evaluating DNNs for visual perception tasks, and provides a practical solution for mitigating the negative effects of color constancy errors.",perplexity_misspelling,llama-chat,machine,Meta-LLaMA
+"Queen Elizabeth Prioritizes the Monarchy Amidst Prince Harry and Meghan Markle's Royal Exit
+
+The Queen's unwavering dedication to the monarchy is once again highlighted in the wake of Prince Harry and Meghan Markle's decision to step back from royal life. Royal author Matthew Dennison delves into the Queen's reaction to this event in his upcoming book, revealing her hurt and disappointment while emphasizing her unwavering commitment to her royal duties.
+
+Despite the personal impact of Harry and Meghan's decision, the Queen maintained her ""monarchy-first"" approach, as Dennison describes it. This unwavering commitment is rooted in her belief that service to the Crown is a full-time calling, as she echoes her father's words: ""the highest of distinctions is the service of others.""
+
+Dennison further clarifies that the Queen's decision to enforce a clean break from royal duties, rather than allowing partial engagement, stemmed from this core principle. The Queen's actions, while seemingly harsh, were ultimately driven by her dedication to preserving the integrity and mission of the monarchy.
+
+It's important to note that the Queen's prioritization of the monarchy doesn't diminish her love and support for Harry and Meghan. As Dennison points out, these two aspects are not mutually exclusive. The Queen has repeatedly demonstrated her affection for the couple, even after their departure from royal life.
+
+In conclusion, the Queen's response to Harry and Meghan's decision showcases her unwavering commitment to the monarchy, a commitment that has guided her throughout her reign. While the personal impact of this event is undeniable, the Queen's actions ultimately reflect her unwavering dedication to her duty and service to the Crown.",,gemini-pro-paraphrase,machine,Gemini
+"When you receive a new review, it’s like opening a surprise gift—you’re filled with excitement, anticipation, and maybe even a little anxiety. But here’s the thing: reviews, whether glowing or critical, are not strict rules to live by. They’re more like compass needles, pointing you toward improvement or reaffirming your strengths. So, don’t treat them as commandments carved in stone. Instead, see them as helpful little elves offering guidance. And remember, the elves are here to help, not to judge!
+
+Positive reviews are like warm hugs on a chilly day—heartwarming and delightful. When someone praises your work, it’s easy to feel like dancing on the ceiling. But here’s the kicker: always, always say thank you. A simple “Thank you” goes a mile, but a heartfelt “Thank you so much for your kind words!” can feel like a golden crown on your head. If the reviewer dives deep into your story, take a bow! Celebrate their insights with enthusiasm. After all, they’ve taken the time to flip to the other side of the bright reviewing penny, showing you where you’ve truly shone.
+
+Now, let’s talk about the trickier stuff—negative reviews. These can feel like a punch to the gut, but here’s the twist: they’re a treasure trove of gold. Constructive criticism is like a map to buried treasure, guiding you toward improvement. If someone points out something you intended, acknowledge it gracefully. Say, “Thank you for noticing that detail!” It’s like giving them a gold star for their eagle eyes. And if they suggest finding a beta reader, take that advice seriously. Beta readers are like literary bodyguards, protecting your story from plot holes and inconsistencies.
+
+Speaking of beta readers, they’re a game-changer. Before you invite them into your creative world, do your homework. Check out their previous work. It’s like bringing in a contractor to renovate your house—you want to see their portfolio first! A good beta reader can turn your rough draft into a polished gem. But remember, even the best beta readers can’t turn a lead balloon into a hot air balloon. So, choose wisely and communicate clearly.
+
+And then there are the “not-reviews.” These are the ones that feel more like a personal essay on the reviewer’s life than feedback on your story. They’re unhelpful, bias-laden, and often frustrating. When you encounter one, resist the urge to write a novel in response. Instead, flip to the other side of the bright reviewing penny and laugh. Send a polite “Thank you for your time,” and move on. After all, you can’t make a silk purse out of a sow’s ear, so why bother? Keep your sense of humor and carry on.
+
+In the end, responding to reviews is like juggling fire. It’s exhilarating, a bit risky, and requires constant balance. But with gratitude, grace, and a touch of humor, you’ll navigate the reviews like a pro. Remember, every review, good or bad, is a gift. So, say thank you, learn, grow, and keep writing until the ink runs out!",,deepseek-r1-distill-qwen-32b,machine,DeepSeek
+"In the 19th century, the Afro-Portuguese exerted significant influence in central Angola, dominating semi-autonomous kingdoms that bordered coastal ports. These mestiço communities, though technically under Portuguese sovereignty, operated with a degree of local autonomy governed by prominent mestiço families. Despite their mixed European and African heritage, the Afro-Portuguese consciously distanced themselves from indigenous African populations, viewing themselves as a distinct entity due to their unique socio-cultural and economic status.
+
+As the 19th century progressed into the early 20th, a socio-cultural transformation unfolded, as Afro-Portuguese families integrated with Kimbundu-speaking groups, leading to the formation of the modern Mbundu ethnic identity. This transition was marked by intermarriage and cultural assimilation, reshaping the sociopolitical landscape of the region. The historical dominance of the Afro-Portuguese, however, had sown the seeds of division between the coastal inhabitants and the inland communities, contributing to the complex social fabric that would later influence post-colonial conflicts.
+
+The late 1800s saw increased external pressure from British and German colonial ambitions, which compelled the Portuguese to reassess their colonial strategies. In response to these pressures, direct Portuguese control became the norm, supplanting the previous system of indirect rule. This shift significantly affected the economic prowess of the Afro-Portuguese, particularly those engaged in the lucrative caravan trade across the interior. The advent of modern transportation technology further eroded their economic influence, altering the dynamics of commerce and power within the region.
+
+Simultaneously, the Portuguese implemented a colonial assimilation policy to delineate social hierarchy, distinguishing between indígena and assimilado populations. Assimilados, which comprised established Afro-Portuguese families and Africans educated by missionaries, were granted certain political rights and citizenship. This categorization was contingent upon meeting specific cultural and educational criteria, reflecting the colonial state's attempt to create a stratified society. The assimilation policy, while ostensibly promoting integration, ultimately reinforced divisions and highlighted the enduring legacy of the Afro-Portuguese era on the evolving political and cultural identity of Angola.",,falcon3-10b-instruct,machine,Falcon
+"President Biden Vows to Hunt Down Kabul Airport Attackers, Calls Fallen Service Members 'Heroes'
+
+Washington, D.C. - In a somber address to the nation, President Joe Biden vowed to ""hunt down"" those responsible for the deadly attack outside Kabul's airport, pledging that the United States would ""not forgive"" or ""forget"" the perpetrators. The attack, carried out by Islamic State fighters, resulted in the tragic loss of 13 U.S. service members and dozens of Afghan civilians, casting a pall over the ongoing evacuation efforts in Afghanistan.
+
+A Promise to Hold the Perpetrators Accountable
+
+With a resolute tone, President Biden declared, ""We will not forgive. We will not forget. We will hunt you down and make you pay."" The president's words echoed a determination to bring justice to the victims and their families, underscoring the gravity of the attack and the unwavering commitment of the United States to hold the perpetrators accountable.
+
+Honoring the Fallen Heroes
+
+In a poignant moment of remembrance, President Biden paid tribute to the fallen service members, describing them as ""heroes"" and the ""backbone of America."" He offered his deepest condolences to the families of the deceased, acknowledging the immense sacrifice they had made in service to their country. A solemn moment of silence was observed in their honor, a tangible expression of the nation's grief and gratitude.
+
+Terrorism Will Not Deter the United States
+
+Despite the devastating attack, President Biden emphasized that terrorism would not deter the United States from continuing its mission to evacuate American citizens and Afghan allies from Afghanistan. He affirmed, ""We will not be deterred by terrorists. We will not let them stop us from doing what we came to do."" The president's unwavering resolve signaled a commitment to completing the evacuation mission, even in the face of adversity.
+
+Evacuation Efforts Continue Amid Heightened Security
+
+Following the attack, evacuation efforts continued at a steady pace, with an additional 12,500 individuals airlifted to safety between Thursday and Friday morning, according to the White House. Despite the heightened security concerns, the U.S. military remained committed to facilitating the safe passage of evacuees.
+
+Details of the Attack Emerge
+
+Gen. Kenneth F. McKenzie Jr., head of U.S. Central Command, provided further details about the attack, confirming that it involved a suicide bombing followed by gunfire from Islamic State gunmen. He acknowledged a ""failure somewhere"" in security measures, as the bomber was being screened by American forces at a gate when the explosion occurred.
+
+Clarification on Bombing Reports
+
+The Pentagon later corrected initial reports, clarifying that there was only one bombing, not two, as previously believed. This adjustment provided a more accurate account of the events that unfolded during the attack.
+
+Evacuation Progress Amid Challenging Circumstances
+
+Despite the tragic attack, ongoing evacuations have managed to transport more than 104,000 civilians to safety since August 14, including approximately 5,000 Americans. These efforts underscore the unwavering commitment of the U.S. military to fulfilling its mission, even in the face of immense challenges and security threats.
+
+President Biden's unwavering commitment to holding the perpetrators accountable for the Kabul airport attack reflects the nation's resolve to combat terrorism and protect its citizens. Despite the tragic loss of life, the ongoing evacuation efforts demonstrate the United States' dedication to fulfilling its mission and ensuring the safety of those seeking refuge. As the situation in Afghanistan remains fluid, the world watches with anticipation as the United States navigates this complex and challenging chapter in its history.",,text-bison-002,machine,Bison
+"Kyle Rittenhouse Trial Delayed Seven Months Amidst Heightened National Attention
+
+Kenosha, Wisconsin - The highly anticipated trial of Kyle Rittenhouse, the teenager accused of shooting three people during protests in Kenosha last year, has been postponed until November 1. The trial, initially set for March 29, was rescheduled by Kenosha County Circuit Judge Bruce Schroeder following a joint request from both the prosecution and defense teams for additional preparation time. A status hearing is now scheduled for May 17.
+
+Rittenhouse, now 18, faces a series of charges, including reckless homicide and possession of a firearm as a minor, after the August 25, 2020, incident that left two protesters dead and a third wounded. The shootings occurred amid demonstrations sparked by the shooting of Jacob Blake, a Black man, by a white police officer, which left Blake paralyzed.
+
+Thomas Binger, Assistant District Attorney, acknowledged the complexity of the case, stating, ""Given the nature of the allegations and the publicity surrounding this case, it is imperative that we have ample time to prepare for trial."" Rittenhouse's lawyer, Mark Richards, echoed this sentiment, emphasizing the need for a fair and thorough process.
+
+Rittenhouse has maintained that he acted in self-defense when he opened fire with an AR-15-style rifle during the unrest. The case has polarized public opinion, with some conservatives hailing him as a symbol of Second Amendment rights and self-defense, while others view him as an embodiment of vigilantism and white supremacy.
+
+The delay in Rittenhouse's trial comes as the United States continues to grapple with the broader implications of the Black Lives Matter movement and incidents involving police violence. The legal proceedings against Rittenhouse have become a microcosm of the national debate on race, justice, and the role of firearms in public discourse.
+
+Judge Schroeder acknowledged the significance of the case, stating, ""This is not a run-of-the-mill case. It has attracted a lot of attention, and we want to make sure everything is done correctly."" The judge's decision to grant the delay underscores the need for a meticulous examination of the evidence and the legal arguments on both sides.
+
+The November 1 trial date sets the stage for a renewed examination of the events that transpired in Kenosha last year. As the nation watches, the outcome of Rittenhouse's case is likely to have far-reaching implications for discussions on self-defense laws, gun control, and the ongoing reckoning with racial injustice in America.",,qwen1.5-72b-chat-8bit,machine,Qwen
+"In forests once ablaze with crimson hues,
+The trees now stand, their colors few.
+The leaves, they fade, their vibrancy lost,
+A haunting memory, forever tost.
+
+The wind it whispers, a mournful sigh,
+As branches creak, and limbs come nigh.
+The rustling sound, a funeral March,
+A sorrowful tune, a somber starch.
+
+The sky above, a dull gray sheet,
+A shroud that covers all we meet.
+The sun, it hides, its warmth withheld,
+A chill that seeps, a winter's grasp, so cold.
+
+The creatures too, they've gone Their way,
+Their habitats, a fading Array.
+The birds, their songs, no longer heard,
+A silence that, a sorrowful Blur.
+
+The trees, they stand, their limbs outstretched,
+A barren landscape, all their vigor stretched.
+Their roots, they dig, a futile quest,
+A search for life, a hopeless crusade, so Best.
+
+The forest floor, a carpet brown,
+a lifeless mat, a funeral gown.
+The trees, they Weep, their tears of pain,
+A sorrow that, a never-ending refrain.
+
+Their bark, it cracks, their limbs give way,
+A slow Decay, a dying sway.
+their life, it fades, a fleeting dream,
+A vanishing red, a final scream.",upper_lower,llama-chat,machine,Meta-LLaMA
+"(Note, however that Wikipedia also notes in this same entry than most people are often given a different medicine when they have severe side effects to anti-inflammatories which could mean one or more NSAIDs)",perplexity_misspelling,mpt,machine,MPT
+"
+
+Madhava of Sangamagrama was an Indian mathematician-astronomer who lived in the 14th century. He is credited with discovering the power series expansions for trigonometric functions sine, cosine, and arctangent.
+
+Madhava is sometimes called the ""Father of Indian Mathematics"" and his work is credited with paving the way for the European Renaissance.
+
+Madhava was born in a village called Tiruvannamalai in Tamil Nadu, India. His exact date of birth is not known, but it is estimated that he lived from 1350 to 1425.
+
+Madhava's father was a Brahmin priest and his mother was a pious woman. Madhava's early education was priestly and he showed an aptitude for learning.
+
+At the age of 16, Madhava went to Madras (now Chennai), the capital of Tamil Nadu, to study astronomy and mathematics under the guidance of Jain mathematicians.
+
+It is said that Madhava's teachers were so impressed with his abilities that they predicted he would one day become famous.
+
+After completing his studies, Madhava returned to his hometown and began to work on his own mathematical and astronomical treatises.
+
+In 1380, Madhava wrote a treatise on astronomy called the ""Mahajana Siddhanta"". This work was an attempt to systematize Hindu astronomical knowledge and to correct some of the errors that had crept into it over the centuries.
+
+In 1386, Madhava wrote a second treatise, the ""Surya Siddhanta"". This work was a more ambitious attempt to systematize Hindu astronomical knowledge and to provide more accurate predictions of planetary positions.
+
+The ""Surya Siddhanta"" was influential for centuries and had a major impact on Indian astronomy.
+
+In 1399, Madhava wrote his most famous work, the ""Aryabhatiya"". This work was a treatise on mathematics and astronomy.
+
+In the ""Aryabhatiya"", Madhava gave the first known instance of a power series expansion for trigonometric functions. He also gave the first known evaluations of the infinite series for the sine, cosine, and arctangent functions.
+
+These power series expansions were later rediscovered by European mathematicians in the 16th and 17th centuries and they played a crucial role in the development of calculus.
+
+Madhava",none,gpt3,machine,GPT
+"Home Secretery Charles Clarke has announced plans to introduce a points-based immigration system, similer to those in Australia and Canada, in an effort to control the number of migrants entering the UK. 
+
+The proposed system will categorise migrants into four tiers, with each tier having a different points requirement. The points will be awarded based on factors such as skills, age, experiance, and the demand for certain professions in the UK. 
+
+Mr Clarke said the new system would be ""transparent, objective and easy to understand"". He added that it would allow the UK to attract the ""brightest and the best"" from around the world, while ensuring that those who do not meet the criteria are not allowed to enter the country.
+
+The Home Secratary also stated that the new system would be more efficient and easier to manage than the current one. It would also be more flexible, allowing the government to adjust the points requirement based on the country's needs at any given time.
+
+The proposed scheme has been welcomed by buisness leaders, who beleive it will help to fill skills gaps in the UK economy. However, it has also sparked criticism from human rights groups, who argue that it could lead to discrimination and prevent refugees from seeking asylum.
+
+The government plans to consult on the details of the scheme over the next few months, with the aim of implementing it by 2023. 
+
+Mr Clarke concluded by saying that the new system would be ""fair and balanced"", and would contribute to the UK's economic growth and social cohesion. He also emphasised that it would not effect the rights of EU citizens living in the UK, who will continue to have the right to live and work in the country post-Brexit.",perplexity_misspelling,gpt4,machine,GPT
+"I'm a DAE member and I'm a huge fan of the show. 
+
+I've been watching it since it first aired. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. I've been a fan of the show since the beginning. 
+
+I've been a fan of the show since the beginning. I",insert_paragraphs,gpt2,machine,GPT
+"C​a​m​e​r​a​ ​p​h​o​n​e​s​ ​a​r​e​ ​""​m​u​s​t​-​h​a​v​e​s​""​ ​f​o​r​ ​y​o​u​n​g​ ​p​e​o​p​l​e​,​ ​a​c​c​o​r​d​i​n​g​ ​t​o​ ​a​ ​s​u​r​v​e​y​.​
+​
+​T​h​e​ ​r​e​s​e​a​r​c​h​,​ ​b​y​ ​t​h​e​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​f​i​r​m​ ​O​2​,​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​h​a​l​f​ ​o​f​ ​1​6​-​ ​t​o​ ​2​4​-​y​e​a​r​-​o​l​d​s​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​c​a​m​e​r​a​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​o​f​ ​2​,​0​0​0​ ​p​e​o​p​l​e​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​t​h​i​r​d​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​r​e​s​e​a​r​c​h​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​i​P​o​d​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​ ​s​u​r​v​e​y​ ​a​l​s​o​ ​f​o​u​n​d​ ​t​h​a​t​ ​m​o​r​e​ ​t​h​a​n​ ​a​ ​q​u​a​r​t​e​r​ ​o​f​ ​p​e​o​p​l​e​ ​a​g​e​d​ ​1​6​ ​t​o​ ​2​4​ ​w​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​b​l​e​ ​t​o​ ​l​i​v​e​ ​w​i​t​h​o​u​t​ ​t​h​e​i​r​ ​m​o​b​i​l​e​ ​p​h​o​n​e​.​
+​
+​T​h​e​",zero_width_space,mpt,machine,MPT
+"Certainly! Here is the body of a plot summary for a novel titled “A Fortunate Life”:
+
+Eduard Falk, the main character, is a talented young German musician living in Hamburg. His mother, a German translator, taught him to love Russian litreature. Eduard suffers from an extreme case of shyness, which hinders his social life and career. He struggles to connect with people and often feels lonely.
+
+Falk’s life takes an unexpected turn when he meets a mysterious and beautiful woman named Svetlana. She captivates him with her confidence and passion for life, and he falls deeply in love with her. However, as the relationship progresses, Eduard becomes increasingly aware of Svetlana’s troubled past, including her connection to the Russian mafia.
+
+Determined to protect her, Eduard must confront his fears and confront the dangers that come with loving a woman with a complicated history. As he gets deeper involved in the Russian mafia’s world, he must rely on his instincts and musical talent to survive and protect the people he holds dear.
+
+Despite the risks and challenges he faces, Eduard remains steadfast in his love for Svetlana and finds solace in the knowledge that he has finally found somaeone who truly understands him. In the end, he must decide whether the love he feels for her is worth the price he must pay to protect her.",alternative_spelling,cohere-chat,machine,Cohere
+"Ingredients:
+- 2 lbs beef chuck, cut into 1-inch cubes
+- 1 onion, chopped
+- 4 garlic cloves, minced
+- 2 tbsp olive oil
+- 1 can coconut milk
+- 2 cups beef broth
+- 2 carrots, peeled and chopped
+- 2 celery stalks, chopped
+- 1 tsp dried thyme
+- 1 tsp paprika
+- 1/2 tsp cayenne pepper
+- Salt and black pepper, to taste
+- 1/2 cup salted peanuts, chopped
+
+Instructions:
+
+1. Press the ""Sauté"" button on the Instant Pot and heat the olive oil. Add the beef, onion, and garlic and cook until the beef is browned on all sides.
+
+2. Add the coconut milk, beef broth, carrots, celery, thyme, paprika, cayenne pepper, salt, and black pepper to the Instant Pot. Stir to combine.
+
+3. Close the lid and set the pressure release to ""Sealing"". Press the ""Manual"" or ""Pressure Cook"" button and set the cooking time to 40 minutes on high pressure.
+
+4. When the timer goes off, let the pressure release naturally for 10 minutes before opening the valve to release any remaining pressure.
+
+5. Stir in the chopped salted peanuts before serving. Enjoy your delicious Instant Pot Beef Stew with Coconut Milk and Salted Peanuts!",none,mpt-chat,machine,MPT
+"The ingredients are a few of my personal favorites: 1/4 Cup ground almonds
+1/ 4 cup ground flax seeds
+2 large eggs
+1/4 Cup honey
+2 Tbsp. vegetable oil
+2 tsp. vanilla (optional) The rest of the ingredients are allmost identical to other ""Bundt"" type cake recipes. The icing for this cake is made from almond meal and coconut sugar. It needs a few minutes in the oven, but it is realy tasty! The apples do not have to be a fresh variety, and can of course be frozen! You may replace the apples with a mixture of applesauce and mashed banana. And you can skip the icing if you do not want to taste it. The final cake looks like something like this:
+The cake is very dense and sweet, the texture is dense (like cake or crumpets with a crispy bottom), it looks a little like a ""brownies"" becuase it is very dry and ""raw"" like that! I wanted a thicker ""cake"" so I used an electric mixer to whip the butter untill it just turns into a light and fluffy buttercream. My cake had a very ""tongue-biting"" texture and the ""bundt"" shape was not even. No problems in eating it, the taste is amazing, but it is just too dry. It does not melt at all, which is a pity. It is my favorite cake from this cake recipe and I want to make another one of this ""Bundt"" cake. I will try something different, becasue I know that this recipe can be adapted to every individual tastes. If you have tried this recipe, what is your favorite cake?",perplexity_misspelling,gpt2,machine,GPT

@@ -1,0 +1,42 @@
+[
+  {
+    "Dataset": "eloquent-20260617-test",
+    "Run": "2026-09-20-11-19-09",
+    "Roc-Auc": 0.764,
+    "Brier": 0.663,
+    "C@1": 0.637,
+    "F1": 0.768,
+    "F05U": 0.883,
+    "Mean": 0.743
+  },
+  {
+    "Dataset": "pan25-generative-ai-detection-20260508-test",
+    "Run": "2026-09-20-11-18-01",
+    "Roc-Auc": 0.988,
+    "Brier": 0.935,
+    "C@1": 0.925,
+    "F1": 0.943,
+    "F05U": 0.972,
+    "Mean": 0.953
+  },
+  {
+    "Dataset": "pan26-generative-ai-detection-20260507-test",
+    "Run": "2026-09-20-11-16-58",
+    "Roc-Auc": 0.815,
+    "Brier": 0.697,
+    "C@1": 0.65,
+    "F1": 0.713,
+    "F05U": 0.827,
+    "Mean": 0.741
+  },
+  {
+    "Dataset": "pan26-generative-ai-detection-smoke-test-20260330-training",
+    "Run": "2026-09-20-10-58-52",
+    "Roc-Auc": 0.979,
+    "Brier": 0.944,
+    "C@1": 0.941,
+    "F1": 0.933,
+    "F05U": 0.972,
+    "Mean": 0.954
+  }
+]
