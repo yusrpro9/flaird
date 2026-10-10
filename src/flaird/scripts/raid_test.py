@@ -23,7 +23,7 @@ from flaird.data.data_collator import DataCollator
 # Configuration
 # =============================================================================
 
-DEFAULT_USERNAME = os.getenv("HF_USERNAME", "MahmoodAnaam")
+DEFAULT_USERNAME = os.getenv("HF_USERNAME", "yusr9")
 
 DEFAULT_MODEL = (
     f"{DEFAULT_USERNAME}/flaird-modernbert-large-attention-multitask"
