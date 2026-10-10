@@ -7,7 +7,7 @@ name = "flaird"
 version = "1.0.0"
 description = "Forensic Linguistics and AI for the Detection of Machine-Generated Disinformation Campaigns"
 authors = [
-  { name = "Mahmood-Anaam" }
+  { name = "yusr" }
 ]
 license = { text = "Apache License 2.0" }
 readme = "README.md"
@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "https://github.com/Mahmood-Anaam/flaird"
+repository = "https://github.com/yusrpro9/flaird"
 
 [project.scripts]
 flaird-train = "flaird.scripts.train:main"
