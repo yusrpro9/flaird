@@ -22,9 +22,9 @@
   ],
   "freeze_encoder": false,
   "max_seq_length": 512,
-  "dataset_train_path": "MahmoodAnaam/flaird-raid-pan26",
+  "dataset_train_path": "yusr9/flaird-raid-pan26",
   "dataset_train_config_name": "flaird_train_features",
-  "dataset_validation_path": "MahmoodAnaam/flaird-raid-pan26",
+  "dataset_validation_path": "yusr9/flaird-raid-pan26",
   "dataset_validation_config_name": "flaird_validation_features",
   "shuffle_train_dataset": true,
   "dataset_cache_dir": "/content/drive/MyDrive/flaird/dataset",
@@ -65,7 +65,7 @@
     "generator_labels"
   ],
   "push_to_hub": true,
-  "hub_model_id": "MahmoodAnaam/flaird-modernbert-large-attention-single-task",
+  "hub_model_id": "yusr9/flaird-modernbert-large-attention-single-task",
   "hub_strategy": "checkpoint",
   "resume_from_checkpoint": null
 }
