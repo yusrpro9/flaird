@@ -1,1 +1,1 @@
-flaird @ git+https://github.com/Mahmood-Anaam/flaird.git@main
+flaird @ git+https://github.com/yusrpro9/flaird.git@main
