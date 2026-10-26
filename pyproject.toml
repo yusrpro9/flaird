@@ -16,8 +16,8 @@ requires-python = ">=3.10"
 dependencies = [
     "python-dotenv==1.2.2",
     "click==8.3.3",
-    "pandas>=2.2.0,<3",
     "datasets==4.0.0",
+    "torch==2.8.0",
     "transformers==5.16.1",
     "wandb==0.28.0",
     "tensorboard>=2.18.0,<3",
@@ -26,6 +26,7 @@ dependencies = [
     "tqdm==4.67.3",
     "nltk==3.9.4",
     "pystylometry[all]>=1.4.3,<2",
+    "plotly==7.1.0",
     "gradio==6.27.0",
 ]
 
@@ -35,6 +36,7 @@ repository = "https://github.com/yusrpro9/flaird"
 [project.scripts]
 flaird-train = "flaird.scripts.train:main"
 flaird-evaluator = "flaird.scripts.evaluator:main"
+flaird-predict = "flaird.scripts.predict:main"
 flaird-tira-test = "flaird.scripts.tira_test:main"
 flaird-raid-test = "flaird.scripts.raid_test:main"
 
