@@ -1,0 +1,48 @@
+name: Sync to Hugging Face Hub
+on:
+  workflow_dispatch:
+    inputs:
+        huggingface_repo_id:
+            description: "Hugging Face model repository ID"
+            required: true
+            default: "yusr9/flaird"
+            type: string
+        repo_type:
+            description: "Type of repository to sync to (model, dataset, space)"
+            required: true
+            default: "space"
+            type: string
+        private:
+            description: "Whether the repository should be private (true/false)"
+            required: false
+            default: true
+            type: boolean
+        space_sdk:
+            description: "Space SDK to use (gradio, streamlit, docker, static)"
+            required: false
+            default: "gradio"
+            type: string
+        subdirectory:
+            description: "Sync only this folder"
+            required: false
+            default: "demo"
+            type: string
+        
+jobs:
+
+    sync:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+            - name: Sync to Hugging Face Hub
+              uses: huggingface/hub-sync@v0.3.0
+              with:
+                github_repo_id: ${{ github.repository }}
+                huggingface_repo_id: ${{ inputs.huggingface_repo_id }}
+                hf_token: ${{ secrets.HF_TOKEN }}
+                repo_type: ${{ inputs.repo_type }}
+                private: ${{ inputs.private }}
+                space_sdk: ${{ inputs.space_sdk }}
+                subdirectory: ${{ inputs.subdirectory }}
+                
