@@ -2,7 +2,7 @@
 
 Example::
 
-    flaird-predict --model MahmoodAnaam/flaird-modernbert-large-attention-multitask \\
+    flaird-predict --model yusr9/flaird-modernbert-large-attention-multitask \\
                    --text "Some text to analyze ..." --output result.json
 """
 
@@ -20,7 +20,7 @@ from flaird.utils.explain import (
     explain_to_markdown,
 )
 
-DEFAULT_MODEL = "MahmoodAnaam/flaird-modernbert-large-attention-multitask"
+DEFAULT_MODEL = "yusr9/flaird-modernbert-large-attention-multitask"
 
 
 def build_parser() -> argparse.ArgumentParser:
