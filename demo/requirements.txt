@@ -1,1 +1,1 @@
-git+https://sh:${GITHUB_TOKEN}@github.com/yusrpro9/flaird.git@develop
+git+https://sh:${GITHUB_TOKEN}@github.com/yusrpro9/flaird.git@main
