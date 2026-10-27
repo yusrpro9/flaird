@@ -1,0 +1,754 @@
+/* Component-scoped styling: Gradio form wrappers retain their native spacing. */
+html,
+body {
+  margin: 0;
+  color-scheme: light;
+}
+
+body,
+.gradio-container {
+  background: var(--page-bg) !important;
+  color: var(--text);
+  font-family: var(--font) !important;
+}
+
+.gradio-container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.gradio-container>.main,
+.gradio-container main.contain {
+  padding: 0 !important;
+}
+
+.gradio-container main.contain>.column {
+  gap: 0 !important;
+}
+
+footer,
+.built-with {
+  display: none !important;
+}
+
+.fx-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.fx-bleed,
+.fx-bleed.block {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  min-height: 0 !important;
+  width: 100%;
+}
+
+.fx-bleed>div:not(.fx-header):not(.fx-hero),
+.fx-bleed .prose {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Quiet masthead, distinct research workspace and high-contrast result tiles. */
+.fx-header {
+  background: #fff;
+  border-bottom: 1px solid var(--track);
+}
+
+.fx-header .fx-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  gap: 24px;
+}
+
+.fx-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.fx-logomark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 46px;
+  flex: 0 0 auto;
+  border-radius: 13px 13px 13px 3px;
+  background: var(--primary-dark);
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.fx-logo {
+  color: var(--primary-dark);
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.25;
+}
+
+.fx-logo small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .01em;
+  color: var(--text-muted);
+}
+
+.fx-header nav {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.fx-header nav a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  padding: 9px 13px;
+  border: 1px solid var(--track);
+  border-radius: 9px;
+}
+
+.fx-header nav a:hover {
+  background: var(--panel-bg);
+  border-color: var(--primary);
+}
+
+.fx-header nav a:focus-visible,
+.fx-tabs button[role="tab"]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.fx-hero {
+  background: linear-gradient(120deg, #142D50, #203F65);
+  padding: 34px 0 30px;
+  color: #fff;
+}
+
+.fx-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  color: #A9DAE1;
+  margin-bottom: 12px;
+}
+
+.fx-hero h1 {
+  color: #fff !important;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 650;
+  line-height: 1.2;
+  border: 0 !important;
+  margin: 0 0 12px !important;
+  letter-spacing: -.025em;
+}
+
+.fx-hero p {
+  color: #D6E2F0 !important;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 78ch;
+  margin: 0 0 26px;
+}
+
+.fx-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fx-kpi {
+  background: #fff;
+  border: 1px solid #DCE5EF;
+  border-radius: 12px;
+  padding: 17px 18px;
+  min-height: 112px;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.fx-kpi .lab {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .025em;
+}
+
+.fx-kpi .val {
+  color: var(--primary-dark);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 6px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.fx-kpi .val.small {
+  font-size: 16px;
+  min-height: 39px;
+  display: flex;
+  align-items: center;
+}
+
+.fx-kpi .sub {
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.fx-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+/* Evidence cards: one spacing scale across every tab and breakpoint. */
+.fx-page {
+  width: 100%;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 26px 32px 40px !important;
+  gap: 20px !important;
+  box-sizing: border-box;
+}
+
+.fx-row {
+  gap: 20px !important;
+  align-items: stretch !important;
+  flex-wrap: wrap !important;
+}
+
+.fx-row>* {
+  min-width: min(100%, 300px) !important;
+}
+
+.fx-card {
+  background: var(--card-bg) !important;
+  border: 1px solid #DCE5EF !important;
+  border-radius: 16px !important;
+  box-shadow: 0 3px 14px #142D5006 !important;
+  padding: 24px !important;
+  gap: 16px !important;
+  min-width: 0;
+}
+
+.fx-card .block {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.fx-card>.block {
+  padding: 0 !important;
+}
+
+.fx-card [data-testid="plotly"] {
+  width: 100%;
+  min-width: 0;
+}
+
+.fx-card .form {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  gap: 16px !important;
+}
+
+.fx-title {
+  color: var(--primary-dark);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.fx-sub,
+.fx-caption {
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+.fx-caption {
+  margin-top: 6px;
+}
+
+.fx-caption b {
+  color: var(--text);
+}
+
+.fx-tabs>.tab-wrapper {
+  border-bottom: 1px solid var(--track);
+  gap: 6px;
+}
+
+.fx-tabs button[role="tab"] {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 13px 18px;
+  color: var(--text-muted);
+  border: 0;
+  background: transparent;
+}
+
+.fx-tabs button[role="tab"][aria-selected="true"] {
+  color: var(--primary);
+  box-shadow: inset 0 -3px var(--primary);
+}
+
+.fx-tabs>.tabitem,
+.fx-tabs [role="tabpanel"] {
+  padding: 22px 0 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.fx-tabs [role="tabpanel"]>.column,
+.fx-tabs .tabitem>.column {
+  gap: 20px !important;
+}
+
+.fx-panel {
+  background: var(--panel-bg);
+  border: 1px solid #E4EAF2;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.fx-bigcap {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.fx-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid #DDE5EF;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.fx-stat:last-child {
+  border-bottom: 0;
+}
+
+.fx-stat .k {
+  color: var(--text-muted);
+}
+
+.fx-stat .v {
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.fx-stat .v.pos {
+  color: var(--machine);
+}
+
+.fx-stat .v.neg {
+  color: var(--human);
+}
+
+.fx-gauge-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.fx-badge,
+.fx-pill,
+.fx-chip {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 6px;
+  padding: 4px 9px;
+}
+
+.fx-badge {
+  color: #fff;
+}
+
+.fx-badge.good {
+  background: var(--good);
+}
+
+.fx-badge.fair {
+  background: #F8E7B6;
+  color: #71500C;
+}
+
+.fx-badge.poor {
+  background: var(--poor);
+}
+
+.fx-badge.info {
+  background: var(--primary);
+}
+
+.fx-badge.teal {
+  background: var(--accent);
+}
+
+.fx-badge.slate {
+  background: #E7EDF4;
+  color: #354C69;
+}
+
+.fx-pill.machine {
+  background: #FBECE8;
+  color: #9D3525;
+}
+
+.fx-pill.human {
+  background: #E3F3F3;
+  color: #086872;
+}
+
+.fx-pill.neutral {
+  background: var(--track);
+  color: var(--text-muted);
+}
+
+.fx-chip {
+  background: var(--panel-bg);
+  color: var(--primary-dark);
+  border: 1px solid var(--track);
+  margin: 0 6px 6px 0;
+  font-weight: 500;
+}
+
+.fx-groupchip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fx-groupchip i {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.fx-warn,
+.fx-ok,
+.fx-notice {
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.fx-warn {
+  color: #78520B;
+  background: #FFF5DB;
+}
+
+.fx-warn:before {
+  content: "! ";
+  font-weight: 700;
+}
+
+.fx-ok {
+  color: #17643D;
+  background: #EAF6EF;
+}
+
+.fx-notice.error {
+  background: #FDECEC;
+  color: #8E1B1B;
+  border: 1px solid #F5C2C2;
+}
+
+.fx-notice.info {
+  background: #EAF0FA;
+  color: var(--primary-dark);
+  border: 1px solid #D6E1F4;
+}
+
+.fx-notice:empty {
+  display: none;
+}
+
+/* These bars encode signed attribution data; they are not loading progress bars. */
+.fx-tablewrap {
+  overflow-x: auto;
+}
+
+.fx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.fx-table,
+.fx-table th,
+.fx-table td,
+.fx-table tr {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.fx-table th {
+  text-align: left;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 2px solid var(--track) !important;
+  padding: 10px !important;
+  white-space: nowrap;
+}
+
+.fx-table td {
+  padding: 13px 10px !important;
+  border-bottom: 1px solid var(--track) !important;
+  vertical-align: middle;
+}
+
+.fx-table tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+.fx-table .feat {
+  font-weight: 600;
+}
+
+.fx-table .desc {
+  display: block;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  line-height: 1.5;
+  margin-top: 3px;
+  max-width: 46ch;
+}
+
+.fx-table .num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.fx-bar {
+  position: relative;
+  height: 8px;
+  background: var(--track);
+  border-radius: 4px;
+  min-width: 120px;
+}
+
+.fx-bar:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  bottom: -2px;
+  width: 1px;
+  background: var(--muted-series);
+}
+
+.fx-bar span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.fx-bar span.machine {
+  left: 50%;
+  background: var(--machine);
+}
+
+.fx-bar span.human {
+  right: 50%;
+  background: var(--human);
+}
+
+.fx-card table,
+.fx-card table * {
+  font-family: var(--font) !important;
+}
+
+.fx-card .table-wrap {
+  border-radius: 10px;
+}
+
+.fx-card textarea {
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  background: #FBFCFE !important;
+}
+
+.fx-card button {
+  border-radius: 9px !important;
+}
+
+button.primary {
+  font-weight: 600 !important;
+  min-height: 46px;
+}
+
+.fx-prose {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 90ch;
+}
+
+.fx-prose h3 {
+  color: var(--primary-dark);
+  margin: 24px 0 10px;
+  font-size: 17px;
+}
+
+.fx-prose code {
+  background: var(--panel-bg);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.fx-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  line-height: 1.7;
+  padding: 6px 24px 30px;
+  max-width: 110ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .fx-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fx-logo small {
+    max-width: 32ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .fx-inner {
+    padding: 0 18px;
+  }
+
+  .fx-header .fx-inner {
+    min-height: 76px;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .fx-brand {
+    gap: 8px;
+  }
+
+  .fx-logo {
+    font-size: 19px;
+  }
+
+  .fx-logo small {
+    display: none;
+  }
+
+  .fx-logomark {
+    width: 34px;
+    height: 38px;
+    font-size: 21px;
+  }
+
+  .fx-header nav {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .fx-header nav a {
+    padding: 7px;
+  }
+
+  .fx-hero {
+    padding: 26px 0 22px;
+  }
+
+  .fx-kpis {
+    gap: 10px;
+  }
+
+  .fx-kpi {
+    padding: 13px;
+    min-height: 110px;
+  }
+
+  .fx-kpi .val {
+    font-size: 25px;
+  }
+
+  .fx-kpi .val.small {
+    font-size: 14px;
+  }
+
+  .fx-page {
+    padding: 18px 12px 28px !important;
+  }
+
+  .fx-card {
+    padding: 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .fx-row>* {
+    min-width: 100% !important;
+  }
+
+  .fx-tabs button[role="tab"] {
+    padding: 11px 9px;
+    font-size: 11px;
+  }
+
+  .fx-stat {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gradio-container *,
+  .gradio-container *:before,
+  .gradio-container *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
