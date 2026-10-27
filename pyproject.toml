@@ -17,7 +17,6 @@ dependencies = [
     "python-dotenv==1.2.2",
     "click==8.3.3",
     "datasets==4.0.0",
-    "torch==2.8.0",
     "transformers==5.16.1",
     "wandb==0.28.0",
     "tensorboard>=2.18.0,<3",
@@ -27,7 +26,6 @@ dependencies = [
     "nltk==3.9.4",
     "pystylometry[all]>=1.4.3,<2",
     "plotly==7.1.0",
-    "gradio==6.27.0",
 ]
 
 [project.urls]
